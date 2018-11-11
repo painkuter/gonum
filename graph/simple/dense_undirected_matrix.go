@@ -238,7 +238,7 @@ func (g *UndirectedMatrix) WeightedEdgeBetween(uid, vid int64) graph.WeightedEdg
 	return nil
 }
 
-// Edges returns all the edges in the graph.
+// WeightedEdges returns all the edges in the graph.
 func (g *UndirectedMatrix) WeightedEdges() graph.WeightedEdges {
 	var edges []graph.WeightedEdge
 	r, _ := g.mat.Dims()

@@ -265,7 +265,7 @@ func (g *DirectedMatrix) WeightedEdge(uid, vid int64) graph.WeightedEdge {
 	return nil
 }
 
-// Edges returns all the edges in the graph.
+// WeightedEdges returns all the edges in the graph.
 func (g *DirectedMatrix) WeightedEdges() graph.WeightedEdges {
 	var edges []graph.WeightedEdge
 	r, _ := g.mat.Dims()
