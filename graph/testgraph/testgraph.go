@@ -19,6 +19,12 @@ import (
 	"gonum.org/v1/gonum/mat"
 )
 
+// BUG(kortschak): Edge equality is tested in part with reflect.DeepEqual and
+// direct equality of weight values. This means that edges returned by graphs
+// must not contain NaN weights. Weights returned by the Weight method are
+// compared with NaN-awareness, so they may be NaN when there is no edge
+// associated with the Weight call.
+
 // BUG(kortschak): The approach of using a nil return for empty sets of nodes
 // and edges used prior to the introduction of the graph.Iterator types does
 // not interact well with interfaces. For example, it is not possible to simply
@@ -720,7 +726,7 @@ func Weight(t *testing.T, b Builder) {
 				case e == nil:
 					t.Errorf("missing edge for existing non-self weight for test %q: (%v)--(%v)", test.name, x.ID(), y.ID())
 
-				case !same(e.Weight(), w):
+				case e.Weight() != w:
 					t.Errorf("weight mismatch for test %q: edge=%v graph=%v", test.name, e.Weight(), w)
 				}
 			}
@@ -814,8 +820,8 @@ type lexicalUndirectedEdges []graph.Edge
 
 func (e lexicalUndirectedEdges) Len() int { return len(e) }
 func (e lexicalUndirectedEdges) Less(i, j int) bool {
-	lidi, hidi := undirectedIDs(e[i])
-	lidj, hidj := undirectedIDs(e[j])
+	lidi, hidi, _ := undirectedIDs(e[i])
+	lidj, hidj, _ := undirectedIDs(e[j])
 
 	if lidi < lidj {
 		return true
@@ -889,8 +895,13 @@ func undirectedEdgeSetEqual(a, b []graph.Edge) bool {
 // undirectedEdgeEqual returns whether a pair of undirected edges are equal
 // after canonicalising from and to IDs by numerical sort order.
 func undirectedEdgeEqual(a, b graph.Edge) bool {
-	loa, hia := undirectedIDs(a)
-	lob, hib := undirectedIDs(b)
+	loa, hia, inva := undirectedIDs(a)
+	lob, hib, invb := undirectedIDs(b)
+	// Use reflect.DeepEqual if the edges are parallel
+	// rather anti-parallel.
+	if inva == invb {
+		return reflect.DeepEqual(a, b)
+	}
 	if loa != lob || hia != hib {
 		return false
 	}
@@ -907,18 +918,19 @@ func undirectedEdgeEqual(a, b graph.Edge) bool {
 	if !oka && !okb {
 		return true
 	}
-	return same(wea.Weight(), web.Weight())
+	return wea.Weight() == web.Weight()
 }
 
 // undirectedIDs returns a numerical sort ordered canonicalisation of the
 // IDs of e.
-func undirectedIDs(e graph.Edge) (lo, hi int64) {
+func undirectedIDs(e graph.Edge) (lo, hi int64, inverted bool) {
 	lid := e.From().ID()
 	hid := e.To().ID()
 	if hid < lid {
+		inverted = true
 		hid, lid = lid, hid
 	}
-	return lid, hid
+	return lid, hid, inverted
 }
 
 type edge struct {
