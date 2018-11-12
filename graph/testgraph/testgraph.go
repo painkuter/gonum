@@ -47,6 +47,8 @@ func isValidIterator(graph.Iterator) bool {
 // a valid graph construction.
 type Builder func(nodes []graph.Node, edges []graph.WeightedEdge, self, absent float64) (g graph.Graph, n []graph.Node, e []graph.Edge, s, a float64, ok bool)
 
+// FIXME(kortschak): Use edges []graph.WeightedLine so that line ID can be specified.
+
 // edgeLister is a graph that can return all its edges.
 type edgeLister interface {
 	// Edges returns all the edges of a graph.
