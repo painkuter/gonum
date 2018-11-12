@@ -284,7 +284,7 @@ func ReturnAllLines(t *testing.T, b Builder) {
 				if !ok {
 					continue
 				}
-				for lit != nil && it.Next() {
+				for lit != nil && lit.Next() {
 					got = append(got, lit.Line())
 				}
 				if g.Node(e.From().ID()) == nil {
@@ -445,7 +445,7 @@ func ReturnAllWeightedLines(t *testing.T, b Builder) {
 				if !ok {
 					continue
 				}
-				for lit != nil && it.Next() {
+				for lit != nil && lit.Next() {
 					got = append(got, lit.Line())
 				}
 				if g.Node(e.From().ID()) == nil {
