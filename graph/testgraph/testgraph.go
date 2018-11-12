@@ -181,7 +181,7 @@ func ReturnAllEdges(t *testing.T, b Builder) {
 			}
 			for it != nil && it.Next() {
 				e := it.Edge()
-				got = append(got, it.Edge())
+				got = append(got, e)
 				if g.Edge(e.From().ID(), e.To().ID()) == nil {
 					t.Errorf("missing edge for test %q: %v", test.name, e)
 				}
