@@ -4,7 +4,7 @@
 
 // Package testgraph provides a set of testing helper functions
 // that test gonum graph interface implementations.
-package testgraph
+package testgraph // import "gonum.org/v1/gonum/graph/testgraph"
 
 import (
 	"fmt"
