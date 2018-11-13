@@ -282,13 +282,24 @@ func ReturnAllLines(t *testing.T, b Builder) {
 				if g.Edge(e.From().ID(), e.To().ID()) == nil {
 					t.Errorf("missing edge for test %q: %v", test.name, e)
 				}
-				lit, ok := e.(graph.Lines)
-				if !ok {
+
+				// FIXME(kortschak): This would not be necessary
+				// if graph.WeightedLines (and by symmetry)
+				// graph.WeightedEdges also were graph.Lines
+				// and graph.Edges.
+				switch lit := e.(type) {
+				case graph.Lines:
+					for lit != nil && lit.Next() {
+						got = append(got, lit.Line())
+					}
+				case graph.WeightedLines:
+					for lit != nil && lit.Next() {
+						got = append(got, lit.WeightedLine())
+					}
+				default:
 					continue
 				}
-				for lit != nil && lit.Next() {
-					got = append(got, lit.Line())
-				}
+
 				if g.Node(e.From().ID()) == nil {
 					t.Errorf("missing from node for test %q: %v", test.name, e.From().ID())
 				}
@@ -443,13 +454,24 @@ func ReturnAllWeightedLines(t *testing.T, b Builder) {
 				if g.Edge(e.From().ID(), e.To().ID()) == nil {
 					t.Errorf("missing edge for test %q: %v", test.name, e)
 				}
-				lit, ok := e.(graph.Lines)
-				if !ok {
+
+				// FIXME(kortschak): This would not be necessary
+				// if graph.WeightedLines (and by symmetry)
+				// graph.WeightedEdges also were graph.Lines
+				// and graph.Edges.
+				switch lit := e.(type) {
+				case graph.Lines:
+					for lit != nil && lit.Next() {
+						got = append(got, lit.Line())
+					}
+				case graph.WeightedLines:
+					for lit != nil && lit.Next() {
+						got = append(got, lit.WeightedLine())
+					}
+				default:
 					continue
 				}
-				for lit != nil && lit.Next() {
-					got = append(got, lit.Line())
-				}
+
 				if g.Node(e.From().ID()) == nil {
 					t.Errorf("missing from node for test %q: %v", test.name, e.From().ID())
 				}
