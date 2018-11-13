@@ -7,10 +7,10 @@
 package gonum
 
 import (
-	math "gonum.org/v1/gonum/internal/math32"
+	math "gonum/internal/math32"
 
-	"gonum.org/v1/gonum/blas"
-	"gonum.org/v1/gonum/internal/asm/f32"
+	"gonum/blas"
+	"gonum/internal/asm/f32"
 )
 
 var _ blas.Float32Level1 = Implementation{}

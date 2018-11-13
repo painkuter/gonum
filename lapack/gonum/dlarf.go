@@ -5,8 +5,8 @@
 package gonum
 
 import (
-	"gonum.org/v1/gonum/blas"
-	"gonum.org/v1/gonum/blas/blas64"
+	"gonum/blas"
+	"gonum/blas/blas64"
 )
 
 // Dlarf applies an elementary reflector to a general rectangular matrix c.

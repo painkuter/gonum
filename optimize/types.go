@@ -10,7 +10,7 @@ import (
 	"math"
 	"time"
 
-	"gonum.org/v1/gonum/mat"
+	"gonum/mat"
 )
 
 const defaultGradientAbsTol = 1e-6

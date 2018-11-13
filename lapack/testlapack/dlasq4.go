@@ -7,7 +7,7 @@ package testlapack
 import (
 	"testing"
 
-	"gonum.org/v1/gonum/floats"
+	"gonum/floats"
 )
 
 type dlasq4teststruct struct {

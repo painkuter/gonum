@@ -25,7 +25,7 @@ var imports = []byte(`import(
 	"golang.org/x/exp/rand"
 	"testing"
 
-	"gonum.org/v1/gonum/blas"
+	"gonum/blas"
 )`)
 
 var randomSliceFunction = []byte(`func randomSlice(l, idx int) ([]float64) {

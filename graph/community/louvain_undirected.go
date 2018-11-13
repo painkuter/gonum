@@ -10,10 +10,10 @@ import (
 
 	"golang.org/x/exp/rand"
 
-	"gonum.org/v1/gonum/graph"
-	"gonum.org/v1/gonum/graph/internal/ordered"
-	"gonum.org/v1/gonum/graph/internal/set"
-	"gonum.org/v1/gonum/graph/iterator"
+	"gonum/graph"
+	"gonum/graph/internal/ordered"
+	"gonum/graph/internal/set"
+	"gonum/graph/iterator"
 )
 
 // qUndirected returns the modularity Q score of the graph g subdivided into the

@@ -20,7 +20,7 @@ cat blas64/conv_test.go \
 | gofmt -r 'float64 -> float32' \
 \
 | sed -e 's/blas64/blas32/' \
-      -e 's_"math"_math "gonum.org/v1/gonum/internal/math32"_' \
+      -e 's_"math"_math "gonum/internal/math32"_' \
 \
 >> blas32/conv_test.go
 
@@ -39,7 +39,7 @@ cat blas64/conv_symmetric_test.go \
 | gofmt -r 'float64 -> float32' \
 \
 | sed -e 's/blas64/blas32/' \
-      -e 's_"math"_math "gonum.org/v1/gonum/internal/math32"_' \
+      -e 's_"math"_math "gonum/internal/math32"_' \
 \
 >> blas32/conv_symmetric_test.go
 
@@ -127,7 +127,7 @@ cat blas64/conv_test.go \
 | gofmt -r 'float64 -> complex64' \
 \
 | sed -e 's/blas64/cblas64/' \
-      -e 's_"math"_math "gonum.org/v1/gonum/internal/cmplx64"_' \
+      -e 's_"math"_math "gonum/internal/cmplx64"_' \
 \
 >> cblas64/conv_test.go
 
@@ -154,6 +154,6 @@ cat blas64/conv_symmetric_test.go \
       -e 's/a symmetric/an Hermitian/g' \
       -e 's/symmetric/hermitian/g' \
       -e 's/Sym/Herm/g' \
-      -e 's_"math"_math "gonum.org/v1/gonum/internal/cmplx64"_' \
+      -e 's_"math"_math "gonum/internal/cmplx64"_' \
 \
 >> cblas64/conv_hermitian_test.go

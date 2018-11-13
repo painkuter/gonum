@@ -7,8 +7,8 @@ package stat
 import (
 	"math"
 
-	"gonum.org/v1/gonum/floats"
-	"gonum.org/v1/gonum/mat"
+	"gonum/floats"
+	"gonum/mat"
 )
 
 // CovarianceMatrix returns the covariance matrix (also known as the

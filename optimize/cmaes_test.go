@@ -11,9 +11,9 @@ import (
 
 	"golang.org/x/exp/rand"
 
-	"gonum.org/v1/gonum/floats"
-	"gonum.org/v1/gonum/mat"
-	"gonum.org/v1/gonum/optimize/functions"
+	"gonum/floats"
+	"gonum/mat"
+	"gonum/optimize/functions"
 )
 
 type cmaTestCase struct {

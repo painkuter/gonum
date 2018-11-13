@@ -7,7 +7,7 @@ package gonum
 import (
 	"math"
 
-	"gonum.org/v1/gonum/lapack"
+	"gonum/lapack"
 )
 
 // Dlanst computes the specified norm of a symmetric tridiagonal matrix A.

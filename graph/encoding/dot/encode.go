@@ -11,9 +11,9 @@ import (
 	"sort"
 	"strings"
 
-	"gonum.org/v1/gonum/graph"
-	"gonum.org/v1/gonum/graph/encoding"
-	"gonum.org/v1/gonum/graph/internal/ordered"
+	"gonum/graph"
+	"gonum/graph/encoding"
+	"gonum/graph/internal/ordered"
 )
 
 // Node is a DOT graph node.

@@ -7,7 +7,7 @@ package optimize
 import (
 	"math"
 
-	"gonum.org/v1/gonum/mat"
+	"gonum/mat"
 )
 
 const maxNewtonModifications = 20

@@ -8,7 +8,7 @@ import (
 	"math"
 	"testing"
 
-	"gonum.org/v1/gonum/floats"
+	"gonum/floats"
 )
 
 func TestLegendre(t *testing.T) {

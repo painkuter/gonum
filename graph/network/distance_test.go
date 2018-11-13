@@ -8,9 +8,9 @@ import (
 	"math"
 	"testing"
 
-	"gonum.org/v1/gonum/floats"
-	"gonum.org/v1/gonum/graph/path"
-	"gonum.org/v1/gonum/graph/simple"
+	"gonum/floats"
+	"gonum/graph/path"
+	"gonum/graph/simple"
 )
 
 var undirectedCentralityTests = []struct {

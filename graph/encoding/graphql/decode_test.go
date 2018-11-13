@@ -12,10 +12,10 @@ import (
 	"strings"
 	"testing"
 
-	"gonum.org/v1/gonum/graph"
-	"gonum.org/v1/gonum/graph/encoding"
-	"gonum.org/v1/gonum/graph/encoding/dot"
-	"gonum.org/v1/gonum/graph/simple"
+	"gonum/graph"
+	"gonum/graph/encoding"
+	"gonum/graph/encoding/dot"
+	"gonum/graph/simple"
 )
 
 var decodeTests = []struct {

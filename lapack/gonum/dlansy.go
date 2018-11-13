@@ -7,8 +7,8 @@ package gonum
 import (
 	"math"
 
-	"gonum.org/v1/gonum/blas"
-	"gonum.org/v1/gonum/lapack"
+	"gonum/blas"
+	"gonum/lapack"
 )
 
 // Dlansy computes the specified norm of an n×n symmetric matrix. If

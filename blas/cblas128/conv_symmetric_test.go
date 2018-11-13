@@ -10,7 +10,7 @@ import (
 	math "math/cmplx"
 	"testing"
 
-	"gonum.org/v1/gonum/blas"
+	"gonum/blas"
 )
 
 func newSymmetricFrom(a SymmetricCols) Symmetric {

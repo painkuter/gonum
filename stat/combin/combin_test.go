@@ -9,8 +9,8 @@ import (
 	"reflect"
 	"testing"
 
-	"gonum.org/v1/gonum/floats"
-	"gonum.org/v1/gonum/mat"
+	"gonum/floats"
+	"gonum/mat"
 )
 
 // intSosMatch returns true if the two slices of slices are equal.

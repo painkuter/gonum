@@ -9,9 +9,9 @@ import (
 	"fmt"
 	"math"
 
-	"gonum.org/v1/gonum/graph"
-	"gonum.org/v1/gonum/graph/iterator"
-	"gonum.org/v1/gonum/graph/simple"
+	"gonum/graph"
+	"gonum/graph/iterator"
+	"gonum/graph/simple"
 )
 
 const (

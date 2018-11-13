@@ -5,8 +5,8 @@
 package blas32
 
 import (
-	"gonum.org/v1/gonum/blas"
-	"gonum.org/v1/gonum/blas/gonum"
+	"gonum/blas"
+	"gonum/blas/gonum"
 )
 
 var blas32 blas.Float32 = gonum.Implementation{}

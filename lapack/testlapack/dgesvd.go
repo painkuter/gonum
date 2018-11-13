@@ -10,10 +10,10 @@ import (
 
 	"golang.org/x/exp/rand"
 
-	"gonum.org/v1/gonum/blas"
-	"gonum.org/v1/gonum/blas/blas64"
-	"gonum.org/v1/gonum/floats"
-	"gonum.org/v1/gonum/lapack"
+	"gonum/blas"
+	"gonum/blas/blas64"
+	"gonum/floats"
+	"gonum/lapack"
 )
 
 type Dgesvder interface {

@@ -10,9 +10,9 @@ import (
 	"sort"
 	"testing"
 
-	"gonum.org/v1/gonum/graph"
-	"gonum.org/v1/gonum/graph/internal/ordered"
-	"gonum.org/v1/gonum/graph/simple"
+	"gonum/graph"
+	"gonum/graph/internal/ordered"
+	"gonum/graph/simple"
 )
 
 var yenShortestPathTests = []struct {

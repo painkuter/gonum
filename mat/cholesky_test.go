@@ -10,8 +10,8 @@ import (
 
 	"golang.org/x/exp/rand"
 
-	"gonum.org/v1/gonum/blas/testblas"
-	"gonum.org/v1/gonum/floats"
+	"gonum/blas/testblas"
+	"gonum/floats"
 )
 
 func TestCholesky(t *testing.T) {

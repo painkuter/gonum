@@ -7,7 +7,7 @@ package combin
 import (
 	"math"
 
-	"gonum.org/v1/gonum/mat"
+	"gonum/mat"
 )
 
 const (

@@ -30,7 +30,7 @@ package main
 import (
 	"fmt"
 
-	"gonum.org/v1/gonum/blas/blas64"
+	"gonum/blas/blas64"
 )
 
 func main() {

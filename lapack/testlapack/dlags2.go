@@ -10,9 +10,9 @@ import (
 
 	"golang.org/x/exp/rand"
 
-	"gonum.org/v1/gonum/blas"
-	"gonum.org/v1/gonum/blas/blas64"
-	"gonum.org/v1/gonum/floats"
+	"gonum/blas"
+	"gonum/blas/blas64"
+	"gonum/floats"
 )
 
 type Dlags2er interface {

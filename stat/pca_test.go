@@ -8,8 +8,8 @@ import (
 	"math"
 	"testing"
 
-	"gonum.org/v1/gonum/floats"
-	"gonum.org/v1/gonum/mat"
+	"gonum/floats"
+	"gonum/mat"
 )
 
 func TestPrincipalComponents(t *testing.T) {

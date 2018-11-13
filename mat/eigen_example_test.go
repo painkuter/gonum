@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"log"
 
-	"gonum.org/v1/gonum/mat"
+	"gonum/mat"
 )
 
 func ExampleEigenSym() {

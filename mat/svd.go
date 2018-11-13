@@ -5,9 +5,9 @@
 package mat
 
 import (
-	"gonum.org/v1/gonum/blas/blas64"
-	"gonum.org/v1/gonum/lapack"
-	"gonum.org/v1/gonum/lapack/lapack64"
+	"gonum/blas/blas64"
+	"gonum/lapack"
+	"gonum/lapack/lapack64"
 )
 
 // SVD is a type for creating and using the Singular Value Decomposition (SVD)

@@ -8,9 +8,9 @@ import (
 	"math"
 	"testing"
 
-	"gonum.org/v1/gonum/graph"
-	"gonum.org/v1/gonum/graph/simple"
-	"gonum.org/v1/gonum/mat"
+	"gonum/graph"
+	"gonum/graph/simple"
+	"gonum/mat"
 )
 
 type weightedDirectedBuilder interface {

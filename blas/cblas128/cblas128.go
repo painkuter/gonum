@@ -5,8 +5,8 @@
 package cblas128
 
 import (
-	"gonum.org/v1/gonum/blas"
-	"gonum.org/v1/gonum/blas/gonum"
+	"gonum/blas"
+	"gonum/blas/gonum"
 )
 
 var cblas128 blas.Complex128 = gonum.Implementation{}

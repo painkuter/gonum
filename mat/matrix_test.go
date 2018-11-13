@@ -10,9 +10,9 @@ import (
 	"reflect"
 	"testing"
 
-	"gonum.org/v1/gonum/blas"
-	"gonum.org/v1/gonum/blas/blas64"
-	"gonum.org/v1/gonum/floats"
+	"gonum/blas"
+	"gonum/blas/blas64"
+	"gonum/floats"
 )
 
 func panics(fn func()) (panicked bool, message string) {

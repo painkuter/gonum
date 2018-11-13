@@ -7,7 +7,7 @@ package optimize
 import (
 	"math"
 
-	"gonum.org/v1/gonum/stat/distmv"
+	"gonum/stat/distmv"
 )
 
 // GuessAndCheck is a global optimizer that evaluates the function at random

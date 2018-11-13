@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"sort"
 
-	"gonum.org/v1/gonum/graph"
-	"gonum.org/v1/gonum/graph/internal/ordered"
-	"gonum.org/v1/gonum/graph/internal/set"
+	"gonum/graph"
+	"gonum/graph/internal/ordered"
+	"gonum/graph/internal/set"
 )
 
 // Unorderable is an error containing sets of unorderable graph.Nodes.

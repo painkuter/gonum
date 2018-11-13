@@ -6,7 +6,7 @@
 
 package blas32
 
-import "gonum.org/v1/gonum/blas"
+import "gonum/blas"
 
 // SymmetricCols represents a matrix using the conventional column-major storage scheme.
 type SymmetricCols Symmetric

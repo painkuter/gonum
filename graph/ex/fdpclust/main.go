@@ -7,8 +7,8 @@ package main
 import (
 	"fmt"
 
-	"gonum.org/v1/gonum/graph"
-	"gonum.org/v1/gonum/graph/topo"
+	"gonum/graph"
+	"gonum/graph/topo"
 )
 
 func main() {

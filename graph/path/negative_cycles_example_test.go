@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"math"
 
-	"gonum.org/v1/gonum/graph/path"
-	"gonum.org/v1/gonum/graph/simple"
+	"gonum/graph/path"
+	"gonum/graph/simple"
 )
 
 func ExampleBellmanFordFrom_negativecycles() {

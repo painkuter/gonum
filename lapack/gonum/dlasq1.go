@@ -7,8 +7,8 @@ package gonum
 import (
 	"math"
 
-	"gonum.org/v1/gonum/blas/blas64"
-	"gonum.org/v1/gonum/lapack"
+	"gonum/blas/blas64"
+	"gonum/lapack"
 )
 
 // Dlasq1 computes the singular values of an n×n bidiagonal matrix with diagonal

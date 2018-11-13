@@ -7,10 +7,10 @@
 package blas32
 
 import (
-	math "gonum.org/v1/gonum/internal/math32"
+	math "gonum/internal/math32"
 	"testing"
 
-	"gonum.org/v1/gonum/blas"
+	"gonum/blas"
 )
 
 func newSymmetricFrom(a SymmetricCols) Symmetric {

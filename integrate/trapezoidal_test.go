@@ -8,7 +8,7 @@ import (
 	"math"
 	"testing"
 
-	"gonum.org/v1/gonum/floats"
+	"gonum/floats"
 )
 
 func TestTrapezoidal(t *testing.T) {

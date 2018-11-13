@@ -7,8 +7,8 @@
 package gonum
 
 import (
-	"gonum.org/v1/gonum/blas"
-	"gonum.org/v1/gonum/internal/asm/f32"
+	"gonum/blas"
+	"gonum/internal/asm/f32"
 )
 
 var _ blas.Float32Level2 = Implementation{}

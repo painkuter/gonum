@@ -7,9 +7,9 @@ package gonum
 import (
 	"math"
 
-	"gonum.org/v1/gonum/blas"
-	"gonum.org/v1/gonum/blas/blas64"
-	"gonum.org/v1/gonum/lapack"
+	"gonum/blas"
+	"gonum/blas/blas64"
+	"gonum/lapack"
 )
 
 // Dgeev computes the eigenvalues and, optionally, the left and/or right

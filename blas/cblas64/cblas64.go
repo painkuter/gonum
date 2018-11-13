@@ -5,8 +5,8 @@
 package cblas64
 
 import (
-	"gonum.org/v1/gonum/blas"
-	"gonum.org/v1/gonum/blas/gonum"
+	"gonum/blas"
+	"gonum/blas/gonum"
 )
 
 var cblas64 blas.Complex64 = gonum.Implementation{}

@@ -8,8 +8,8 @@ import (
 	"math"
 	"testing"
 
-	"gonum.org/v1/gonum/blas/blas64"
-	"gonum.org/v1/gonum/blas/testblas"
+	"gonum/blas/blas64"
+	"gonum/blas/testblas"
 )
 
 func TestInner(t *testing.T) {

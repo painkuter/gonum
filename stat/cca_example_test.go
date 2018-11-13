@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"log"
 
-	"gonum.org/v1/gonum/floats"
-	"gonum.org/v1/gonum/mat"
-	"gonum.org/v1/gonum/stat"
+	"gonum/floats"
+	"gonum/mat"
+	"gonum/stat"
 )
 
 // symView is a helper for getting a View of a SymDense.

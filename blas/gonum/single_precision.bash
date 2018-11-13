@@ -30,8 +30,8 @@ cat level1double.go \
       -e 's_^// D_// S_' \
       -e "s_^\(func (Implementation) \)Id\(.*\)\$_$WARNING\1Is\2_" \
       -e 's_^// Id_// Is_' \
-      -e 's_"gonum.org/v1/gonum/internal/asm/f64"_"gonum.org/v1/gonum/internal/asm/f32"_' \
-      -e 's_"math"_math "gonum.org/v1/gonum/internal/math32"_' \
+      -e 's_"gonum/internal/asm/f64"_"gonum/internal/asm/f32"_' \
+      -e 's_"math"_math "gonum/internal/math32"_' \
 >> level1single.go
 
 echo Generating level1single_sdot.go
@@ -44,7 +44,7 @@ cat level1double_ddot.go \
 \
 | sed -e "s_^\(func (Implementation) \)D\(.*\)\$_$WARNING\1S\2_" \
       -e 's_^// D_// S_' \
-      -e 's_"gonum.org/v1/gonum/internal/asm/f64"_"gonum.org/v1/gonum/internal/asm/f32"_' \
+      -e 's_"gonum/internal/asm/f64"_"gonum/internal/asm/f32"_' \
 >> level1single_sdot.go
 
 echo Generating level1single_dsdot.go
@@ -57,7 +57,7 @@ cat level1double_ddot.go \
 \
 | sed -e "s_^\(func (Implementation) \)D\(.*\)\$_$WARNING\1Ds\2_" \
       -e 's_^// D_// Ds_' \
-      -e 's_"gonum.org/v1/gonum/internal/asm/f64"_"gonum.org/v1/gonum/internal/asm/f32"_' \
+      -e 's_"gonum/internal/asm/f64"_"gonum/internal/asm/f32"_' \
 >> level1single_dsdot.go
 
 echo Generating level1single_sdsdot.go
@@ -72,7 +72,7 @@ cat level1double_ddot.go \
       -e 's_^// D\(.*\)$_// Sds\1 plus a constant_' \
       -e 's_\\sum_alpha + \\sum_' \
       -e 's/n int/n int, alpha float32/' \
-      -e 's_"gonum.org/v1/gonum/internal/asm/f64"_"gonum.org/v1/gonum/internal/asm/f32"_' \
+      -e 's_"gonum/internal/asm/f64"_"gonum/internal/asm/f32"_' \
 >> level1single_sdsdot.go
 
 
@@ -97,7 +97,7 @@ cat level2double.go \
 \
 | sed -e "s_^\(func (Implementation) \)D\(.*\)\$_$WARNING\1S\2_" \
       -e 's_^// D_// S_' \
-      -e 's_"gonum.org/v1/gonum/internal/asm/f64"_"gonum.org/v1/gonum/internal/asm/f32"_' \
+      -e 's_"gonum/internal/asm/f64"_"gonum/internal/asm/f32"_' \
 >> level2single.go
 
 
@@ -115,7 +115,7 @@ cat level3double.go \
 \
 | sed -e "s_^\(func (Implementation) \)D\(.*\)\$_$WARNING\1S\2_" \
       -e 's_^// D_// S_' \
-      -e 's_"gonum.org/v1/gonum/internal/asm/f64"_"gonum.org/v1/gonum/internal/asm/f32"_' \
+      -e 's_"gonum/internal/asm/f64"_"gonum/internal/asm/f32"_' \
 >> level3single.go
 
 echo Generating sgemm.go
@@ -141,5 +141,5 @@ cat dgemm.go \
 | sed -e "s_^\(func (Implementation) \)D\(.*\)\$_$WARNING\1S\2_" \
       -e 's_^// D_// S_' \
       -e 's_^// d_// s_' \
-      -e 's_"gonum.org/v1/gonum/internal/asm/f64"_"gonum.org/v1/gonum/internal/asm/f32"_' \
+      -e 's_"gonum/internal/asm/f64"_"gonum/internal/asm/f32"_' \
 >> sgemm.go

@@ -9,12 +9,12 @@ import (
 	"sort"
 	"testing"
 
-	"gonum.org/v1/gonum/floats"
-	"gonum.org/v1/gonum/graph"
-	"gonum.org/v1/gonum/graph/internal/ordered"
-	"gonum.org/v1/gonum/graph/iterator"
-	"gonum.org/v1/gonum/graph/simple"
-	"gonum.org/v1/gonum/mat"
+	"gonum/floats"
+	"gonum/graph"
+	"gonum/graph/internal/ordered"
+	"gonum/graph/iterator"
+	"gonum/graph/simple"
+	"gonum/mat"
 )
 
 var diffuseTests = []struct {

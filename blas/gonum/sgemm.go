@@ -10,8 +10,8 @@ import (
 	"runtime"
 	"sync"
 
-	"gonum.org/v1/gonum/blas"
-	"gonum.org/v1/gonum/internal/asm/f32"
+	"gonum/blas"
+	"gonum/internal/asm/f32"
 )
 
 // Sgemm performs one of the matrix-matrix operations

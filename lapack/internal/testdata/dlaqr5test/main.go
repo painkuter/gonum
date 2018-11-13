@@ -20,7 +20,7 @@ import (
 
 	"golang.org/x/exp/rand"
 
-	"gonum.org/v1/gonum/lapack/internal/testdata/netlib"
+	"gonum/lapack/internal/testdata/netlib"
 )
 
 type Dlaqr5Test struct {

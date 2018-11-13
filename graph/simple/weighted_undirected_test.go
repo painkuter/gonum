@@ -8,7 +8,7 @@ import (
 	"math"
 	"testing"
 
-	"gonum.org/v1/gonum/graph"
+	"gonum/graph"
 )
 
 func TestAssertWeightedMutableNotDirected(t *testing.T) {

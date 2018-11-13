@@ -4,4 +4,4 @@
 
 // Package multi provides a suite of multigraph implementations satisfying
 // the gonum/graph interfaces.
-package multi // import "gonum.org/v1/gonum/graph/multi"
+package multi // import "gonum/graph/multi"

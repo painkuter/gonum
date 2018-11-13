@@ -7,10 +7,10 @@
 package cblas64
 
 import (
-	math "gonum.org/v1/gonum/internal/cmplx64"
+	math "gonum/internal/cmplx64"
 	"testing"
 
-	"gonum.org/v1/gonum/blas"
+	"gonum/blas"
 )
 
 func newGeneralFrom(a GeneralCols) General {
